@@ -197,14 +197,14 @@ class Tintuc extends React.Component {
                     <Checkbox disabled={this.props.loading} />
                   </Form.Item>
                 </Col>
-                <Col xs={24} sm={12} md={12} lg={6} xl={6}>
+                {/* <Col xs={24} sm={12} md={12} lg={6} xl={6}>
                   <Form.Item
                     label=" ">
                     <Button icon={<BellOutlined />} size="small" type="primary" onClick={() => this.toggleModal(id)}>
                       Kiểm tra thông báo
                   </Button>
                   </Form.Item>
-                </Col>
+                </Col> */}
               </>}
             <Col xs={24} sm={24} md={24} lg={12} xl={12}>
               <Form.Item
@@ -284,7 +284,7 @@ class Tintuc extends React.Component {
             </Col>
           </Row>
         </Box>
-        <Modal
+        {/* <Modal
           title='Quản lý thông báo'
           visible={this.state.showModal}
           closable
@@ -323,7 +323,7 @@ class Tintuc extends React.Component {
               </Col>
             </Row>
           </Form>
-        </Modal>
+        </Modal> */}
       </Form>
     );
   }

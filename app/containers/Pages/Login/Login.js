@@ -34,8 +34,8 @@ class Login extends Component {
       <div style={{ height: "100vh" }}>
         <div id='login' className='login-form'>
           <div className='logo'>
-            <img alt="logo" src={LOGO}/>
-            <span>Đại phúc DFC</span>
+            {/* <img alt="logo" src={LOGO}/> */}
+            <span>Quản lý thông tin website Đại phúc DFC</span>
           </div>
           <Form onFinish={this.handleLogin.bind(this)}>
             <FormItem name="username" rules={[{ required: true, message: 'Không được để trống' }]} hasFeedback>

@@ -44,19 +44,19 @@ class DanhMucNhanVien extends Component {
       render: (value, row, index) => (this.state.page - 1) * this.state.limit + (index + 1),
       align: 'center',
     },
-    {
-      title: 'Avatar',
-      dataIndex: 'hinhanh',
-      align: 'center',
-      render: (value) => {
-        if (value) {
-          return <Avatar
-            src={<Image src={API.FILES.format(value)}/>}
-          />;
-        }
-        return null;
-      },
-    },
+    // {
+    //   title: 'Avatar',
+    //   dataIndex: 'hinhanh',
+    //   align: 'center',
+    //   render: (value) => {
+    //     if (value) {
+    //       return <Avatar
+    //         src={<Image src={API.FILES.format(value)}/>}
+    //       />;
+    //     }
+    //     return null;
+    //   },
+    // },
     {
       title: 'Tên giáo viên',
       dataIndex: 'tennv',
@@ -66,8 +66,12 @@ class DanhMucNhanVien extends Component {
       dataIndex: 'dienthoai',
     },
     {
-      title: 'Email',
-      dataIndex: 'email',
+      title: 'Đơn vị công tác',
+      dataIndex: 'donvi',
+    },
+    {
+      title: 'Chuyên ngành',
+      dataIndex: 'chuyennganh',
     },
     {
       title: 'Giới tính',
@@ -130,9 +134,11 @@ class DanhMucNhanVien extends Component {
     queryStr += `${search._id ? '&_id={0}'.format(search._id) : ''}`;
     queryStr += `${search.tennv ? '&tennv[like]={0}'.format(search.tennv) : ''}`;
     queryStr += `${search.dienthoai ? '&dienthoai[like]={0}'.format(search.dienthoai) : ''}`;
+    queryStr += `${search.donvi ? '&donvi[like]={0}'.format(search.donvi) : ''}`;
+    queryStr += `${search.chuyennganh ? '&chuyennganh[like]={0}'.format(search.chuyennganh) : ''}`;
     queryStr += `${search.hienthi ? '&hienthi={0}'.format(search.hienthi) : ''}`;
     queryStr += `${search.maphai ? '&maphai={0}'.format(search.maphai) : ''}`;
-    queryStr += `${search.bacsikham ? '&bacsikham={0}'.format(search.bacsikham) : ''}`;
+    // queryStr += `${search.bacsikham ? '&bacsikham={0}'.format(search.bacsikham) : ''}`;
     const apiResponse = await getAll(page, limit, queryStr);
     const dataRes = apiResponse.docs;
     if (apiResponse) {
@@ -257,11 +263,6 @@ class DanhMucNhanVien extends Component {
     const dataSearch = [
       {
         type: 'text',
-        name: '_id',
-        label: 'Mã nhân vien',
-      },
-      {
-        type: 'text',
         name: 'tennv',
         label: 'Tên giáo viên',
       },
@@ -271,13 +272,24 @@ class DanhMucNhanVien extends Component {
         label: 'Điện thoại',
       },
       {
+        type: 'text',
+        name: 'donvi',
+        label: ' Đơn vị công tác',
+      },
+      {
+        type: 'text',
+        name: 'chuyennganh',
+        label: 'Chuyên ngành',
+      },
+      {
         type: 'select',
         name: 'maphai',
         label: 'Giới tính',
         options: phai,
         key: '_id',
         value: 'tenphai',
-      }, {
+      }, 
+      {
         type: 'select',
         name: 'hienthi',
         options: [

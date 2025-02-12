@@ -143,7 +143,46 @@ class UpdateNhanVien extends Component {
               </Col>
 
             </Row>
+
             <Row gutter={10}>
+                          <Col xs={24} xl={6}>
+                            <Form.Item label="Trình độ" name="trinhdo" labelCol={labelCol}
+                                       validateTrigger={['onChange', 'onBlur']}
+                                       rules={[{ required: true, message: 'Trình độ không được để trống' }]}>
+                              <Input placeholder="Nhập Trình độ"/>
+                            </Form.Item>
+                          </Col>
+            
+                          <Col xs={24} xl={6}>
+                            <Form.Item label="Chuyên ngành đào tạo"
+                                       name="chuyennganh"
+                                       hasFeedback
+                                       rules={[RULE.REQUIRED]}>
+                              <Input  placeholder="Nhập chuyên ngành"/>
+                            </Form.Item>
+                          </Col>
+            
+                          <Col xs={24} xl={6}>
+                            <Form.Item label="Đơn vị"
+                                       name="donvi"
+                                       labelCol={labelCol}
+                                       hasFeedback
+                                       rules={[RULE.REQUIRED]}>
+                              <Input placeholder="Nhập đơn vị"/>
+                            </Form.Item>
+                          </Col>
+                          <Col xs={24} xl={6}>
+                            <Form.Item label="Ghi chú"
+                                       name="ghichu"
+                                       labelCol={labelCol}
+                                       hasFeedback
+                                       >
+                              <Input placeholder="Nhập ghi chú"/>
+                            </Form.Item>
+                          </Col>
+            
+                        </Row>
+            {/* <Row gutter={10}>
               <Col xs={24} xl={10}>
                 <Form.Item label="Nơi sinh" name="noisinh">
                   <TextArea placeholder="Nhập nơi sinh"/>
@@ -155,20 +194,8 @@ class UpdateNhanVien extends Component {
                   <InputNumber placeholder="Thứ tự hiển thị"/>
                 </Form.Item>
               </Col>
-{/* 
-              <Col xs={24} xl={4}>
-                <Form.Item label="Hiển thị trên App" name="hienthi" valuePropName="checked">
-                  <Switch/>
-                </Form.Item>
-              </Col>
 
-              <Col xs={24} xl={4}>
-                <Form.Item label="Bác sĩ phòng khám" name="bacsikham" valuePropName="checked">
-                  <Switch/>
-                </Form.Item>
-              </Col> */}
-
-            </Row>
+            </Row> */}
           </Col>
           <Col xs={24} xl={6}>
             <Form.Item className="text-center" name="hinhanh">
