@@ -19,7 +19,7 @@ pipeline {
                                 excludes: '',
                                 execCommand: "docker build -t daiphucdfcadmin ./CuongDev/daiphucdfcadminCI/ \
                                     && docker service rm daiphucdfc_admin || true \
-                                    && docker stack deploy -c ./CuongDev/daiphucdfcadminCI/docker-compose-vm.yml daiphucdfc \
+                                    && docker stack deploy -c ./CuongDev/daiphucdfcadminCI/docker-compose.yml daiphucdfc \
                                     && rm -rf ./CuongDev/daiphucdfcadminCIB \
                                     && mv ./CuongDev/daiphucdfcadminCI/ ./CuongDev/daiphucdfcadminCIB",
                                 execTimeout: 1200000,
