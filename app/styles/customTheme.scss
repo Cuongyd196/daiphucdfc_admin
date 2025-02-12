@@ -1,0 +1,130 @@
+$fontSizeInput: 13px;
+$fontSizeError: 11px;
+
+.ant-table.ant-table-small {
+  // font-size: $fontSizeInput;
+}
+
+.ant-form.ant-form-small .ant-col {
+  label {
+    font-size: $fontSizeInput;
+  }
+
+  .ant-row.ant-form-item {
+    margin-bottom: 17.5px;
+
+    &.ant-form-item-with-help {
+      margin-bottom: 0;
+    }
+
+    .ant-form-item-control-input {
+      min-height: 26px;
+    }
+  }
+
+  .ant-col.ant-form-item-label > label {
+    font-size: $fontSizeInput;
+  }
+
+
+}
+
+.ant-form.ant-form-vertical.ant-form-small .ant-col {
+  .ant-col.ant-form-item-label {
+    line-height: 0;
+    padding-bottom: 5px;
+
+    > label {
+      height: 20px;
+    }
+  }
+
+  .ant-col.ant-form-item-control {
+    .ant-form-item-control-input .ant-form-item-control-input-content {
+      .ant-input, .ant-select, .ant-select .ant-select-selector,
+      .ant-picker.ant-picker-small {
+        font-size: $fontSizeInput;
+        min-height: 27px;
+
+        input {
+          font-size: $fontSizeInput;
+        }
+      }
+    }
+
+    .ant-form-item-explain, .ant-form-item-split {
+      font-size: $fontSizeError;
+      min-height: 17.5px
+    }
+  }
+
+  .ant-skeleton-input.ant-skeleton-input-sm {
+    height: 27px;
+  }
+}
+
+.ant-form.ant-form-horizontal.ant-form-small .ant-col {
+  .ant-form-item-label > label {
+    height: 26px;
+  }
+
+  .ant-col.ant-form-item-control {
+    .ant-form-item-control-input .ant-form-item-control-input-content {
+      .ant-input, .ant-select, .ant-select .ant-select-selector,
+      .ant-picker.ant-picker-small, .ant-input-number-input-wrap {
+        font-size: $fontSizeInput;
+        height: 24px;
+
+        input {
+          font-size: $fontSizeInput;
+        }
+      }
+    }
+
+    .ant-form-item-explain, .ant-form-item-split {
+      font-size: $fontSizeError;
+      min-height: 17.5px
+    }
+  }
+}
+
+.ant-select-dropdown.small .ant-select-item,
+.ant-picker-dropdown.small {
+  font-size: $fontSizeInput;
+}
+
+// custom ant Divider
+.ant-divider.ant-divider-with-text.ant-divider-plain {
+  margin: 0;
+
+  &:before, &:after {
+    position: unset !important;
+    //border-color: #d9d9d9 !important;
+  }
+}
+
+// end custom ant Divider
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card-hidden {
+  background: transparent;
+  border: none;
+
+  .ant-card-head {
+    background: transparent;
+    padding: 0;
+  }
+
+  .ant-card-body {
+    background-color: #ffffff;
+    padding: 0;
+
+    .ant-table-thead > tr > th {
+      background: transparent;
+    }
+  }
+}
+

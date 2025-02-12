@@ -1,0 +1,16 @@
+.timeline-history{
+  .ant-timeline-item-label{
+    width: calc(20% - 12px) !important;
+  }
+  .ant-timeline-item-tail{
+    width: 20% !important;
+    left: 20% !important;
+  }
+  .ant-timeline-item-head{
+    left: 20% !important;
+  }
+  .ant-timeline-item-content{
+    left: calc(20% - 4px) !important;
+    width: calc(80% - 14px) !important;
+  }
+}

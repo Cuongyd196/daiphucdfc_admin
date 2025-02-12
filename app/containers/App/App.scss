@@ -1,0 +1,18 @@
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+#content-container {
+  margin-top: 55px;
+  position: relative;
+  //overflow: hidden;
+  height: calc(100vh - 55px);
+
+  > .ant-layout-content {
+    margin: 0 16px 16px;
+    min-height: calc(100vh - 55px - 55px - 24px)
+  }
+}

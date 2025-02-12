@@ -1,0 +1,4 @@
+// khai báo các name actions
+export const FETCH_QUANHUYEN = "FETCH_QUANHUYEN";
+export const FETCH_QUANHUYEN_SUCCESS = "FETCH_QUANHUYEN_SUCCESS";
+export const FETCH_QUANHUYEN_ERROR = "FETCH_QUANHUYEN_ERROR";

@@ -1,0 +1,7 @@
+.img-center {
+  display: block;
+  marginLeft: auto;
+  marginRight: auto;
+  width: 200px;
+  height: 200px;
+}
