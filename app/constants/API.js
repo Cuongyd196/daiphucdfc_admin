@@ -1,6 +1,5 @@
 export const API = {
-  // API_HOST: 'https://pktunganh.thinklabs.com.vn',
-  API_HOST: 'http://localhost:3000',
+  API_HOST: process.env.NODE_ENV == "production" ? 'https://daiphucdfc.tech36.net' : 'http://localhost:3000',
   FILE: '/api/files',
   POWERBI: '/api/powerbi',
   POWERBI_MANAGER: '/api/powerbi/manager',
