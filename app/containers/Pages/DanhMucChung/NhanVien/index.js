@@ -62,22 +62,31 @@ class DanhMucNhanVien extends Component {
       dataIndex: 'tennv',
     },
     {
-      title: 'Số điện thoại',
-      dataIndex: 'dienthoai',
-    },
-    {
-      title: 'Đơn vị công tác',
-      dataIndex: 'donvi',
+      title: 'Trình độ',
+      dataIndex: 'trinhdo',
     },
     {
       title: 'Chuyên ngành',
       dataIndex: 'chuyennganh',
     },
+    // {
+    //   title: 'Số điện thoại',
+    //   dataIndex: 'dienthoai',
+    // },
     {
-      title: 'Giới tính',
-      dataIndex: ['maphai', 'tenphai'],
-      align: 'center',
+      title: 'Đơn vị công tác',
+      dataIndex: 'donvi',
     },
+    {
+      title: 'Ghi chú',
+      dataIndex: 'ghichu',
+    },
+
+    // {
+    //   title: 'Giới tính',
+    //   dataIndex: ['maphai', 'tenphai'],
+    //   align: 'center',
+    // },
     // {
     //   title: 'Hiển thị trên App',
     //   dataIndex: 'hienthi',

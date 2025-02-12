@@ -25,8 +25,8 @@ export default function QuanLyFrontend() {
       <Tabs.TabPane key="website" tab="Cài đặt website" className="p-4">
         <CaiDatWebsite/>
       </Tabs.TabPane>
-      <Tabs.TabPane key="lienhe" tab=" " className="p-4">
-        {/* <QuanLyLienHe/> */}
+      <Tabs.TabPane key="lienhe" tab="Quản lý liên hệ" className="p-4">
+        <QuanLyLienHe/>
       </Tabs.TabPane>
 
     </Tabs>

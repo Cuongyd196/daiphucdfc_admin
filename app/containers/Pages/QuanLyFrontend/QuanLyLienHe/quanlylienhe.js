@@ -30,7 +30,6 @@ class QuanLyLienHe extends React.Component {
       width: 200,
       render: (value) => <div style={{ textAlign: 'left' }}>
         <div>Họ tên: {value.hoten}</div>
-        <div className="text-xs text-blue-500">-Mã BN: {value.mabn}</div>
       </div>,
       align: 'center',
     },
@@ -99,7 +98,6 @@ class QuanLyLienHe extends React.Component {
     let queryStr = '';
     queryStr += `${search.from_date ? '&ngaylienhe[from]={0}'.format(search.from_date) : ''}`;
     queryStr += `${search.to_date ? '&ngaylienhe[to]={0}'.format(search.to_date) : ''}`;
-    queryStr += `${search.mabn ? '&mabn={0}'.format(search.mabn) : ''}`;
     queryStr += `${search.tenbn ? '&hoten[like]={0}'.format(search.tenbn) : ''}`;
     queryStr += `${search.status ? '&status={0}'.format(search.status) : ''}`;
     const apiResponse = await getAllLienHe(page, limit, queryStr);
@@ -179,11 +177,7 @@ class QuanLyLienHe extends React.Component {
     const trangthai_sc = [{ _id: 0, tabindex: 'Chờ liên hệ' }, { _id: 1, tabindex: 'Đã liên hệ' }];
     const layoutCol = { 'xs': 24, 'sm': 12, 'md': 12, 'lg': 6 };
     const dataSearch = [
-      {
-        name: 'mabn',
-        label: 'Mã bệnh nhân',
-        type: 'text',
-      },
+
       {
         name: 'tenbn',
         label: 'Tên người liên hệ',
@@ -273,11 +267,6 @@ class QuanLyLienHe extends React.Component {
               <Col xs={24}>
                 <Form.Item label="_id" name="_id" hidden='true'>
                   <Input disabled/>
-                </Form.Item>
-              </Col>
-              <Col {...layoutCol}>
-                <Form.Item label="Mã bệnh nhân" name="mabn">
-                  <Input disabled defaultValue=''/>
                 </Form.Item>
               </Col>
               <Col {...layoutCol}>
