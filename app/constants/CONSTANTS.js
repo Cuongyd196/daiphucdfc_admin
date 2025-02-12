@@ -112,4 +112,6 @@ export const ROLE_PAGES = [
 
   { trang: 'quan-ly-frontend', tentrang: 'Quản lý Frontend', quyen: ['xem', 'sua'], xem: false,  sua: false },
 
+  { trang: 'lien-he', tentrang: 'Quản lý liên hệ', quyen: ['xem', 'them', 'sua', 'xoa'], xem: false, them: false, sua: false, xoa: false },
+
 ];
