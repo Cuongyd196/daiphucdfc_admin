@@ -1,20 +1,13 @@
-version: "3.2"
+version: "3.6"
 services:
-  web:
-    image: "registry.thinklabs.com.vn:5000/pktunganhweb:latest"
+  admin:
+    image: "dauphucdfcadmin:latest"
     deploy:
       replicas: 1
-      placement:
-        constraints: [node.labels.environment==development]
       restart_policy:
         condition: any
     environment:
       PORT: 80
       NODE_ENV: "production"
-      SERVICE_80_NAME: "pktunganhweb"
-      SERVICE_NAME: "pktunganhweb"
-      SERVICE_TAGS: "pktunganhweb"
     ports:
-      - target: 80
-        published: 8023
-        mode: host
+      - "8100:80"

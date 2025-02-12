@@ -4,7 +4,6 @@ pipeline {
         stage('Init') {
             steps {
                 echo 'Testing..'
-                telegramSend(message: 'Building job: $PROJECT_NAME ... - Link: $BUILD_URL', chatId: -721410839)
             }
         }
         stage ('Deployments') {
@@ -13,33 +12,31 @@ pipeline {
                 echo 'Copy project over SSH...'
                 sshPublisher(publishers: [
                     sshPublisherDesc(
-                        configName: 'swarm1',
+                        configName: 'CuongServer',
                         transfers:
                             [sshTransfer(
                                 cleanRemote: false,
                                 excludes: '',
-                                execCommand: "docker build -t registry.thinklabs.com.vn:5000/pktunganhweb ./thinklabsdev/pktunganhwebCI/ \
-                                    && docker image push registry.thinklabs.com.vn:5000/pktunganhweb \
-                                    && docker service rm pktunganh_web || true \
-                                    && docker stack deploy -c ./thinklabsdev/pktunganhwebCI/docker-compose.yml pktunganh \
-                                    && rm -rf ./thinklabsdev/pktunganhwebCIB \
-                                    && mv ./thinklabsdev/pktunganhwebCI/ ./thinklabsdev/pktunganhwebCIB",
-                                execTimeout: 600000,
+                                execCommand: "docker build -t daiphucdfcadmin ./CuongDev/daiphucdfcadminCI/ \
+                                    && docker service rm daiphucdfc_admin || true \
+                                    && docker stack deploy -c ./CuongDev/daiphucdfcadminCI/docker-compose-vm.yml daiphucdfc \
+                                    && rm -rf ./CuongDev/daiphucdfcadminCIB \
+                                    && mv ./CuongDev/daiphucdfcadminCI/ ./CuongDev/daiphucdfcadminCIB",
+                                execTimeout: 1200000,
                                 flatten: false,
                                 makeEmptyDirs: false,
                                 noDefaultExcludes: false,
                                 patternSeparator: '[, ]+',
-                                remoteDirectory: './thinklabsdev/pktunganhwebCI',
+                                remoteDirectory: './CuongDev/daiphucdfcadminCI',
                                 remoteDirectorySDF: false,
                                 removePrefix: '',
-                                sourceFiles: '*, app/, server/, webpack/'
+                                sourceFiles: '*, app/, server/, webpack/, public/'
                             )],
                         usePromotionTimestamp: false,
                         useWorkspaceInPromotion: false,
-                        verbose: false
+                        verbose: true
                     )
                 ])
-                telegramSend(message: 'Build - $PROJECT_NAME – # $BUILD_NUMBER – STATUS: $BUILD_STATUS!', chatId: -721410839)
             }
         }
     }
