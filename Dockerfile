@@ -1,4 +1,4 @@
-FROM node:12.22.1-alpine3.12 as build-step
+FROM node:14.18.3-alpine3.15 as build-step
 RUN apk add --update --no-cache autoconf libtool automake nasm gcc make g++ zlib-dev
 WORKDIR /app
 COPY package.json .
