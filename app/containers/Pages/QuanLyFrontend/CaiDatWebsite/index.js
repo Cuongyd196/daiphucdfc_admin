@@ -79,7 +79,7 @@ const CaiDatWebsite = () =>{
   return <div>
     <Form size="small" layout="vertical" autoComplete="off" onFinish={onSave} name="form" form={form}>
       <Row  className="justify-between">
-        <Typography.Title level={5} className="underline">1. Thông tin phòng khám</Typography.Title>
+        <Typography.Title level={5} className="underline">1. Thông tin website</Typography.Title>
         {
           myPermission[url].sua && <Button size="small" type="primary" icon={<SaveOutlined/>} htmlType="submit">Lưu dữ liệu</Button>
         }

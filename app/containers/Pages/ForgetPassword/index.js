@@ -29,7 +29,7 @@ export default function ForgetPassword() {
       <div id="login" className="login-form">
         <div className="logo">
           <img alt="logo" src={LOGO} />
-          <span>Phòng khám Tùng Anh</span>
+          <span>Đại Phúc DFC</span>
         </div>
         <Form layout="vertical" onFinish={forgetPassword}>
           <Form.Item
