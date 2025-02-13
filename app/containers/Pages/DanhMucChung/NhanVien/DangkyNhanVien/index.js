@@ -176,16 +176,15 @@ class AddNhanVien extends Component {
               </Col>
 
             </Row>
-            {/* <Row gutter={10}>
-              <Col xs={24} xl={10}>
-                <Form.Item label="Nơi sinh" name="noisinh">
-                  <TextArea placeholder="Nhập nơi sinh"/>
-                </Form.Item>
-              </Col>
-
-              <Col xs={24} xl={6}>
+            <Row gutter={10}>
+            <Col xs={24} xl={6}>
                 <Form.Item label="Thứ tự hiển thị" name="thutuhienthi" hasFeedback rules={[RULE.NUMBER_FLOAT]}>
                   <InputNumber placeholder="Thứ tự hiển thị"/>
+                </Form.Item>
+              </Col>
+              {/* <Col xs={24} xl={10}>
+                <Form.Item label="Nơi sinh" name="noisinh">
+                  <TextArea placeholder="Nhập nơi sinh"/>
                 </Form.Item>
               </Col>
 
@@ -199,9 +198,9 @@ class AddNhanVien extends Component {
                 <Form.Item label="Bác sĩ phòng khám" name="bacsikham" valuePropName="checked">
                   <Switch/>
                 </Form.Item>
-              </Col> *
+              </Col>  */}
 
-            </Row> */}
+            </Row>
           </Col>
           <Col xs={24} xl={6}>
             <Form.Item className="text-center" name="hinhanh">

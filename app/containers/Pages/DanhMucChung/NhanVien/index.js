@@ -69,10 +69,6 @@ class DanhMucNhanVien extends Component {
       title: 'Chuyên ngành',
       dataIndex: 'chuyennganh',
     },
-    // {
-    //   title: 'Số điện thoại',
-    //   dataIndex: 'dienthoai',
-    // },
     {
       title: 'Đơn vị công tác',
       dataIndex: 'donvi',
@@ -80,6 +76,10 @@ class DanhMucNhanVien extends Component {
     {
       title: 'Ghi chú',
       dataIndex: 'ghichu',
+    },
+    {
+      title: 'Thứ tự hiển thị',
+      dataIndex: 'thutuhienthi',
     },
 
     // {

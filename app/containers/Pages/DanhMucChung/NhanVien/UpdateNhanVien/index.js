@@ -182,12 +182,12 @@ class UpdateNhanVien extends Component {
                           </Col>
             
                         </Row>
-            {/* <Row gutter={10}>
-              <Col xs={24} xl={10}>
+            <Row gutter={10}>
+              {/* <Col xs={24} xl={10}>
                 <Form.Item label="Nơi sinh" name="noisinh">
                   <TextArea placeholder="Nhập nơi sinh"/>
                 </Form.Item>
-              </Col>
+              </Col> */}
 
               <Col xs={24} xl={6}>
                 <Form.Item label="Thứ tự hiển thị" name="thutuhienthi" hasFeedback rules={[RULE.NUMBER_FLOAT]}>
@@ -195,7 +195,7 @@ class UpdateNhanVien extends Component {
                 </Form.Item>
               </Col>
 
-            </Row> */}
+            </Row>
           </Col>
           <Col xs={24} xl={6}>
             <Form.Item className="text-center" name="hinhanh">
